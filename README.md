@@ -142,4 +142,28 @@ Manufacturer.csv data (received as resonse - which is the expected response)
 
 ### Test Case Status: Passed 
 
-  
+### Test case 3: 
+Checking th behaviour of the API for invalid/inconsistent input paramenters.
+
+Expected Result: 
+No data should be retreived, and the response json consists of null/ 0/ empty values.
+
+Actual Result: Pass (Worked as expected)
+
+### Invalid Supplier:
+Screen Shots of the input parameter:
+![image](https://github.com/user-attachments/assets/d9c0a2ef-5d1b-4b01-b531-3b1aaace5105)
+
+Response Screen shot:
+![image](https://github.com/user-attachments/assets/f73dac18-8235-4f9a-bbf4-d8faa81a9068)
+
+
+### Non-existing page data:
+Screen Shots of the input parameter:
+![image](https://github.com/user-attachments/assets/38bf5f52-42c5-4687-ae06-30398dd18598)
+
+Response Screen shot:
+![image](https://github.com/user-attachments/assets/8abec865-3755-45d2-b16f-7fb1f3108e42)
+
+
+### Test Case Status: Passed  
