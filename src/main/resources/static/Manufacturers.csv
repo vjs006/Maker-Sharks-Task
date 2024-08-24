@@ -1,21 +1,24 @@
-M001,Alpha Manufacturing,917890123456,New Delhi,medium_scale,moulding, 3d_printing
-M002,Bravo Builders,919876543210,Mumbai,large_scale,casting, coating
-M003,Charlie Components,915551212,Chennai,small_scale,moulding, 3d_printing
-M004,Delta Designs,914445556666,Hyderabad,medium_scale,3d_printing, casting
-M005,Echo Electronics,913334445555,Bangalore,large_scale,moulding, coating
-M006,Foxtrot Fabrics,912223334444,Kolkata,small_scale,3d_printing, casting
-M007,Golf Gear,911112223333,Pune,medium_scale,moulding, coating
-M008,Hotel Hardware,919998887777,Ahmedabad,large_scale,3d_printing, casting
-M009,India Industries,918887776666,Jaipur,small_scale,moulding, 3d_printing
-M010,Juliet Jewelry,917776665555,Lucknow,medium_scale,3d_printing, casting
-M011,Kilo Kitchens,916665554444,Kanpur,large_scale,moulding, coating
-M012,Lima Logistics,915554443333,Nagpur,small_scale,3d_printing, casting
-M013,Mike Machines,914443332222,Indore,medium_scale,moulding, coating
-M014,November Nuts,913332221111,Bhopal,large_scale,3d_printing, casting
-M015,Oscar Optics,912221110000,Patna,small_scale,moulding, 3d_printing
-M016,Peter Pharmaceuticals,911110009999,Ranchi,medium_scale,moulding, 3d_printing
-M017,Queen Quilts,919999888877,Bhubaneswar,large_scale,casting, coating
-M018,Romeo Robotics,918888777766,Coimbatore,small_scale,moulding, 3d_printing
-M019,Sierra Steel,917777666655,Chandigarh,medium_scale,3d_printing, casting
-M020,Tango Textiles,916666555544,Guwahati,large_scale,moulding, coating
-M021,Beta Manufacturing,917890123456,New Delhi,medium_scale,moulding, 3d_printing
+M001,Alpha Manufacturing,917890123456,New Delhi,medium_scale,moulding
+M002,Bravo Builders,919876543210,Mumbai,large_scale,casting
+M003,Charlie Components,915551212,Chennai,small_scale,moulding
+M004,Delta Designs,914445556666,Hyderabad,medium_scale,3d_printing
+M005,Echo Electronics,913334445555,Bangalore,large_scale,moulding
+M006,Foxtrot Fabrics,912223334444,Kolkata,small_scale,3d_printing
+M007,Golf Gear,911112223333,Pune,medium_scale,moulding
+M008,Hotel Hardware,919998887777,Ahmedabad,large_scale,3d_printing
+M009,India Industries,918887776666,Jaipur,small_scale,moulding
+M010,Juliet Jewelry,917776665555,Lucknow,medium_scale,3d_printing
+M011,Kilo Kitchens,916665554444,Kanpur,large_scale,moulding
+M012,Lima Logistics,915554443333,Nagpur,small_scale,3d_printing
+M013,Gamma Manufacturing,917893210456,New Delhi,medium_scale,moulding
+M014,Mike Machines,914443332222,Indore,medium_scale,moulding
+M015,November Nuts,913332221111,Bhopal,large_scale,3d_printing
+M016,Oscar Optics,912221110000,Patna,small_scale,moulding
+M017,Peter Pharmaceuticals,911110009999,Ranchi,medium_scale,moulding
+M018,Queen Quilts,919999888877,Bhubaneswar,large_scale,casting
+M019,Romeo Robotics,918888777766,Coimbatore,small_scale,moulding
+M020,Sierra Steel,917777666655,Chandigarh,medium_scale,3d_printing
+M021,Tango Textiles,916666555544,Guwahati,large_scale,moulding
+M022,Beta Manufacturing,917720123456,New Delhi,medium_scale,moulding
+M023,Delta Manufacturing,917893123456,New Delhi,medium_scale,moulding
+M024,Eta Manufacturing,917890654321,New Delhi,medium_scale,moulding

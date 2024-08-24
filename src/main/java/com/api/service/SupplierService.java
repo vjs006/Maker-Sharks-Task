@@ -15,6 +15,7 @@ public class SupplierService {
 
     private List<Supplier> supplierList = new ArrayList<Supplier>();
     private List<Manufacturer> manufacturerList = new ArrayList<Manufacturer>();
+    private int totalManufacturersForSupId = 0;
 
     public SupplierService(){
         for (List<String> record: file1.getRecords()){
@@ -25,8 +26,9 @@ public class SupplierService {
         }
     }
 
-    public List<Manufacturer> getManufacturers(String supplierId) {
-        List<Manufacturer> result = new ArrayList<Manufacturer>();
+    public List<Manufacturer> getManufacturers(String supplierId, int page, int size) {
+        List<Manufacturer> filteredManufacturers = new ArrayList<Manufacturer>();
+        totalManufacturersForSupId = 0;
         String srchLocation = "";
         String srchNature = "";
         String srchProcess = "";
@@ -42,11 +44,16 @@ public class SupplierService {
             if (manufacturer.getLocation().equals(srchLocation) 
                 && manufacturer.getNatureOfBusiness().equals(srchNature)
                 && manufacturer.getManufacturingProcess().equals(srchProcess)){
-                result.add(manufacturer);
+                this.totalManufacturersForSupId++;
+                filteredManufacturers.add(manufacturer);
             }
-
         }
-        return result;
+
+        int start = page * size;
+        int end = Math.min(start + size, filteredManufacturers.size());
+
+        // Return a sublist for pagination
+        return filteredManufacturers.subList(start, end);
     }
 
     public Supplier getSupplier(String supplierId) {
@@ -56,6 +63,10 @@ public class SupplierService {
             }
         }
         return null;
+    }
+
+    public int getTotalManufacturers(String supplierId) {
+        return this.totalManufacturersForSupId;
     }
     
 }

@@ -1,15 +1,15 @@
-S001,Acme Corporation,https://www.acmecorp.com/,New Delhi,medium_scale,moulding, 3d_printing
-S002,Beta Enterprises,https://www.linkedin.com/company/beta-enterprises,Mumbai,large_scale,casting, coating
-S003,Gamma Industries,https://www.gamma-industries.com/en/,Chennai,small_scale,moulding, 3d_printing
-S004,Delta Solutions,https://www.deltasands.com/,Hyderabad,medium_scale,3d_printing, casting
-S005,Epsilon Systems,https://www.epsilonsystems.com/,Bangalore,large_scale,moulding, coating
-S006,Zeta Ventures,https://www.zettavp.com/,Kolkata,small_scale,3d_printing, casting
-S007,Theta Technologies,https://thetandt.com/,Pune,medium_scale,moulding, coating
-S008,Iota Innovations,https://www.iota.org/,Seattle,large_scale,3d_printing, casting
-S009,Kappa Kinetics,https://www.thermofisher.com/order/catalog/product/7103302500,Denver,small_scale,moulding, 3d_printing
-S010,Lambda Labs,https://lambdalabs.com/,Phoenix,medium_scale,3d_printing, casting
-S011,Mu Manufacturing,https://www.mfg-mu.com/en,Dallas,large_scale,moulding, coating
-S012,Nu Nexus,https://nunexs.com/,San Francisco,small_scale,3d_printing, casting
-S013,Xi Xylem,https://www.xylem.com/en-us/,Detroit,medium_scale,moulding, coating
-S014,Omicron Optics,https://www.omicron-laser.de/,Portland,large_scale,3d_printing, casting
-S015,Pi Precision,https://www.pi-usa.us/en/products,Austin,small_scale,moulding, 3d_printing
+S001,Acme Corporation,https://www.acmecorp.com/,New Delhi,medium_scale,moulding
+S002,Beta Enterprises,https://www.linkedin.com/company/beta-enterprises,Mumbai,large_scale,casting
+S003,Gamma Industries,https://www.gamma-industries.com/en/,Chennai,small_scale,moulding
+S004,Delta Solutions,https://www.deltasands.com/,Hyderabad,medium_scale,3d_printing
+S005,Epsilon Systems,https://www.epsilonsystems.com/,Bangalore,large_scale,moulding
+S006,Zeta Ventures,https://www.zettavp.com/,Kolkata,small_scale,3d_printing
+S007,Theta Technologies,https://thetandt.com/,Pune,medium_scale,moulding
+S008,Iota Innovations,https://www.iota.org/,Seattle,large_scale,3d_printing
+S009,Kappa Kinetics,https://www.thermofisher.com/order/catalog/product/7103302500,Denver,small_scale,moulding
+S010,Lambda Labs,https://lambdalabs.com/,Phoenix,medium_scale,3d_printing
+S011,Mu Manufacturing,https://www.mfg-mu.com/en,Dallas,large_scale,moulding
+S012,Nu Nexus,https://nunexs.com/,San Francisco,small_scale,3d_printing
+S013,Xi Xylem,https://www.xylem.com/en-us/,Detroit,medium_scale,moulding
+S014,Omicron Optics,https://www.omicron-laser.de/,Portland,large_scale,3d_printing
+S015,Pi Precision,https://www.pi-usa.us/en/products,Austin,small_scale,moulding
