@@ -32,6 +32,11 @@ API is designed to respond to a request in the format as specified below:
   
   Response statistics : total pages, total manufacturers matching the given query, current page number, page size
 
+### Source Code:
+To view the source code, view the packages and files in src which has the following file structure.
+![image](https://github.com/user-attachments/assets/15215a60-13ce-457f-9240-8a5d2a11efa8)
+
+
 ## How does the API work:
   1. The API takes the input parameters given in the POST request sent by the user.
   2. It checks the supplier.csv file, for the existence of a supplier with the input parameters supplier_id, location, natureOfBusiness and manufacturingProcess.
