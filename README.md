@@ -91,4 +91,55 @@ Manufacturer.csv data (received as resonse - which is the expected response)
 
 ### Test Case Status: Passed
 
+### Test case 2: 
+Checking if the pagination is working fine.
+
+Expected Result: 
+Data to get retreived correctly from the manufacturer.csv file for the given input parameter and sent as a response. The response must contain data of the page specified in the input parameter and each page shouldnt exceed the specified size parameter. Multiple pages consists of the paginated data.
+
+Actual Result: Pass (Worked as expected)
+
+Used Input Parameters : S001, New Delhi, medium_scale, moulding
+Returns 5 manufacturers.
+Used input size - 2 => 3 pages with maximum 2 manufacturer per page. Since there are 5 manufacturers, split will be 2+2+1.
+
+Screen Shots of the input parameter:
+
+### Page 0, size 2 check:
+
+Request SS:
+
+![image](https://github.com/user-attachments/assets/7f8281b2-bb39-4165-a7ec-347e95d14acf)
+
+Response Screen shot:
+
+![image](https://github.com/user-attachments/assets/85d337c0-3385-41c8-9c59-7c32d7a0accc)
+![image](https://github.com/user-attachments/assets/b53a0b8a-6b22-4808-849c-974adbeb0ae5)
+
+
+### Page 1, size 2 check:
+
+Request SS:
+![image](https://github.com/user-attachments/assets/7f3362bf-52a7-4be4-bb86-b84523b6e91d)
+
+Response Screen shot:
+![image](https://github.com/user-attachments/assets/36e967de-2a53-4b0e-82dd-3fb9aed22856)
+![image](https://github.com/user-attachments/assets/d5850a73-9942-442d-ae02-2c5cf57ca01b)
+
+### Page 2, size 2 check:
+
+Request SS:
+![image](https://github.com/user-attachments/assets/c6153956-00d6-49da-9228-897317af736d)
+
+Response Screen shot:
+![image](https://github.com/user-attachments/assets/41c27ef3-9101-403a-a43b-34b671052c12)
+
+
+Supplier.csv data (Supplier used : S001, New Delhi, medium_scale, moulding)
+![image](https://github.com/user-attachments/assets/71ccf498-7b0e-4e18-85a7-5505c955c039)
+Manufacturer.csv data (received as resonse - which is the expected response)
+![image](https://github.com/user-attachments/assets/2f71a1b8-be74-4347-ad2e-30417f794e83)
+
+### Test Case Status: Passed 
+
   
