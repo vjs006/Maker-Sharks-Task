@@ -25,9 +25,11 @@ I have two .csv files storing the Supplier data and Manufacturer data (check pat
   6. manufacturing_processes : Possible values for POC: moulding, 3d_printing, casting, coating
 
 API is designed to respond to a request in the format as specified below:
-### POST:
+### POST Request:
   Input Parameters in query : supplier_id, location, natureOfBusiness, manufacturingProcess, page, size (Mandatory)
+  
   Response : JSON file with supplier record, matching manufacturer records as a list
+  
   Response statistics : total pages, total manufacturers matching the given query, current page number, page size
 
 ## How does the API work:
