@@ -8,7 +8,7 @@ API Endpoint : /api/supplier/query [POST] as given in the requirement
 
 I have two .csv files storing the Supplier data and Manufacturer data (check path : src/main/resources/static).
 
-Fields in Supplier.csv:
+### Fields in Supplier.csv:
   1. supplier_id : unique identifier for each supplier
   2. company_name
   3. website
@@ -16,7 +16,7 @@ Fields in Supplier.csv:
   5. nature_of_business : Possible values: small_scale, medium_scale, large_scale
   6. manufacturing_processes : Possible values for POC: moulding, 3d_printing, casting, coating
 
-Fields in Manufacturer.csv:
+### Fields in Manufacturer.csv:
   1. manufacturer_id : unique identifier for each manufacturer
   2. manufacturer_name
   3. contact
@@ -25,7 +25,7 @@ Fields in Manufacturer.csv:
   6. manufacturing_processes : Possible values for POC: moulding, 3d_printing, casting, coating
 
 API is designed to respond to a request in the format as specified below:
-POST:
+### POST:
   Input Parameters in query : supplier_id, location, natureOfBusiness, manufacturingProcess, page, size (Mandatory)
   Response : JSON file with supplier record, matching manufacturer records as a list
   Response statistics : total pages, total manufacturers matching the given query, current page number, page size
@@ -56,6 +56,37 @@ Prerequisite : JDK 22, SpringBoot framework, some IDE with maven dependency mana
       http://localhost:8080/api/supplier/query?supplierId=<>&location=<>&natureOfBusiness=<>&manufacturingProcess=<>&page=<>&size=<>
   5. The response JSON will be received and shown in the POSTMAN screen.
 
-## Test cases:
+## Coding and Implementation:
+  Status : Completed Successfully.
+  
+## Unit Testing:
+  Status : Completed Successfully.
 
-Test case 1:
+The following are some of the key test cases covered during my exhaustive unit testing.
+
+### Test case 1: 
+Checking the correctness of the response data.
+
+Expected Result: 
+Data to get retreived correctly from the manufacturer.csv file for the given input parameter and sent as a response
+
+Actual Result: Pass (Worked as expected)
+
+Screen Shots of the input parameter:
+
+![image](https://github.com/user-attachments/assets/a99cc7e9-e613-4cc3-9943-dafb36bb6fe6)
+
+Response Screen shot:
+
+![image](https://github.com/user-attachments/assets/227a6ec3-b43c-469e-bacb-7466bbbd225d)
+![image](https://github.com/user-attachments/assets/106f19ad-cddc-4ebd-a5dd-c74281215fd7)
+![image](https://github.com/user-attachments/assets/389465bc-ae09-4c8d-92c1-26b80d7fc6ce)
+
+Supplier.csv data (Supplier used : S001, New Delhi, medium_scale, moulding)
+![image](https://github.com/user-attachments/assets/71ccf498-7b0e-4e18-85a7-5505c955c039)
+Manufacturer.csv data (received as resonse - which is the expected response)
+![image](https://github.com/user-attachments/assets/2f71a1b8-be74-4347-ad2e-30417f794e83)
+
+### Test Case Status: Passed
+
+  
