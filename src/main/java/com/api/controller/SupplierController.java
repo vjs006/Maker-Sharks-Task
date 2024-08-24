@@ -25,16 +25,20 @@ public class SupplierController {
     @PostMapping("/api/supplier/query")
     public ResponseEntity<?> getManufacteresForId(
             @RequestParam String supplierId,
+            @RequestParam String location,
+            @RequestParam String natureOfBusiness,
+            @RequestParam String manufacturingProcess,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         try {
-            System.out.println("Eureka");
-            List<Manufacturer> manufacturers = supplierService.getManufacturers(supplierId, page, size);
-            Supplier supplier = supplierService.getSupplier(supplierId);
+            
+            List<Manufacturer> manufacturers = supplierService.getManufacturers(supplierId, location, natureOfBusiness, manufacturingProcess, page, size);
+            
+            Supplier supplier = supplierService.getSupplier(supplierId, location, natureOfBusiness, manufacturingProcess);
+            PaginationResponse response = new PaginationResponse();
             int totalElements = supplierService.getTotalManufacturers(supplierId); 
             int totalPages = (int) Math.ceil((double) totalElements / size);
 
-            PaginationResponse response = new PaginationResponse();
             response.setSupplier(supplier);
             response.setManufacturers(manufacturers);
             response.setPage(page);
@@ -43,6 +47,7 @@ public class SupplierController {
             response.setTotalPages(totalPages);
 
             return new ResponseEntity<>(response, HttpStatus.OK);
+            
         } catch (Exception e) {
             e.printStackTrace(); // Log the exception
             return new ResponseEntity<>("An error occurred while processing the request.", HttpStatus.INTERNAL_SERVER_ERROR);
@@ -50,9 +55,12 @@ public class SupplierController {
     }
 
     @GetMapping("/api/supplier/query")
-    public Supplier getSupplier(@RequestParam String supplierId) {
+    public Supplier getSupplier(@RequestParam String supplierId,
+            @RequestParam String location,
+            @RequestParam String natureOfBusiness,
+            @RequestParam String manufacturingProcess) {
         System.out.println("Request received for supplierId: " + supplierId);
-        return supplierService.getSupplier(supplierId);
+        return supplierService.getSupplier(supplierId, location, natureOfBusiness, manufacturingProcess);
     }
 
 }

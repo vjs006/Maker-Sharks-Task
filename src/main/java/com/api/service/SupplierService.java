@@ -3,6 +3,8 @@ package com.api.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.api.models.Manufacturer;
@@ -26,39 +28,35 @@ public class SupplierService {
         }
     }
 
-    public List<Manufacturer> getManufacturers(String supplierId, int page, int size) {
+    public List<Manufacturer> getManufacturers(String supplierId, String srchLocation, String srchNature, String srchProcess, int page, int size) {
         List<Manufacturer> filteredManufacturers = new ArrayList<Manufacturer>();
         totalManufacturersForSupId = 0;
-        String srchLocation = "";
-        String srchNature = "";
-        String srchProcess = "";
-        for (Supplier supplier: supplierList){
-            if (supplier.getSupplier_id().equals(supplierId)){
-                srchLocation = supplier.getLocation();
-                srchNature = supplier.getNatureOfBusiness();
-                srchProcess = supplier.getManufacturingProcess();
+        Supplier supplier = this.getSupplier(supplierId, srchLocation, srchNature, srchProcess);
+
+        if (supplier != null){
+            for (Manufacturer manufacturer: manufacturerList){
+                if (manufacturer.getLocation().equals(srchLocation) 
+                    && manufacturer.getNatureOfBusiness().equals(srchNature)
+                    && manufacturer.getManufacturingProcess().equals(srchProcess)){
+                    this.totalManufacturersForSupId++;
+                    filteredManufacturers.add(manufacturer);
+                }
             }
         }
-
-        for (Manufacturer manufacturer: manufacturerList){
-            if (manufacturer.getLocation().equals(srchLocation) 
-                && manufacturer.getNatureOfBusiness().equals(srchNature)
-                && manufacturer.getManufacturingProcess().equals(srchProcess)){
-                this.totalManufacturersForSupId++;
-                filteredManufacturers.add(manufacturer);
-            }
-        }
-
         int start = page * size;
         int end = Math.min(start + size, filteredManufacturers.size());
-
+        if (page >= (int) Math.ceil((double) this.totalManufacturersForSupId / size))
+            return new ArrayList<>();
         // Return a sublist for pagination
         return filteredManufacturers.subList(start, end);
     }
 
-    public Supplier getSupplier(String supplierId) {
+    public Supplier getSupplier(String supplierId, String srchLocation, String srchNature, String srchProcess) {
         for (Supplier supplier: supplierList){
-            if (supplier.getSupplier_id().equals(supplierId)){
+            if (supplier.getSupplier_id().equals(supplierId)
+                && supplier.getLocation().equals(srchLocation)
+                && supplier.getNatureOfBusiness().equals(srchNature)
+                && supplier.getManufacturingProcess().equals(srchProcess)){
                 return supplier;
             }
         }
